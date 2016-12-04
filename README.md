@@ -2,6 +2,7 @@ Discount Ascii Warehouse
 ====
 
 This is an ecommerce site, where you can buy all sorts of ascii faces like `(ノ・∀・)ノ` and `¯_(ツ)_/¯`, in a wide variety of font sizes. The homepage should display a list of products for people to browse.
+You should code this using react and redux.
 
 Please read the instructions and FAQ below before beginning.
 
@@ -55,7 +56,7 @@ No, your final solution should not include any changes to the server code.
 
 ### What should I do when I'm finished?
 
-Please zip up your files and email them back, along with information about which features you have included in your solution.
+Please zip up your files and email them back, along with information about which features you have included in your solution. You could also create a repository on Github and send us its link.
 
 ### How is the exam graded?
 
