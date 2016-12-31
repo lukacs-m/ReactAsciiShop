@@ -1,17 +1,8 @@
-var webpack = require("webpack");
-// let path = require('path');
-// let envFile = require('node-env-file');
-//
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-//
-// try {
-//     envFile(path.join(__dirname, 'config/' + process.env.NODE_ENV + '.env'));
-// } catch (e) {
-//
-// }
+var webpack = require('webpack');
 
 module.exports = {
     entry: [
+        'script!jquery/dist/jquery.min.js',
         './src/app.jsx'
     ],
     externals: {
@@ -40,13 +31,13 @@ module.exports = {
         modulesDirectories: [
             'node_modules',
             './src/components',
-            './src/api',
-            './src/utils'
+            './src/api'
         ],
         alias: {
             app: 'src',
             applicationStyles: 'src/styles/app.scss',
             actions: 'src/actions/actions.jsx',
+            actionTypes: 'src/actions/actionTypes.js',
             reducers: 'src/reducers/reducers.jsx',
             configureStore: 'src/store/configureStore.jsx',
             resources: "src/styles/resources"
@@ -62,15 +53,8 @@ module.exports = {
                 },
                 test: /\.jsx?$/,
                 exclude: /(node_modules|bower_components)/
-            },
-            { test: /\.(png|jpg|svg)$/,
-                loader: 'url-loader?limit=8192' }
+            }
         ]
     },
-    sassLoader: {
-        includePaths: [
-            // path.resolve(__dirname, './node_modules/foundation-sites/scss')
-        ]
-    },
-    devtool: process.env.NODE_ENV === 'production' ? undefined : 'cheap-module-eval-source-map'
+    devtool: 'cheap-module-eval-source-map'
 };
